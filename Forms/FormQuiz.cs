@@ -25,18 +25,20 @@ namespace QuizGUI1
 
         private int correctAnswers = 0;
 
-        private List<AnswerButtom> buttons = new List<AnswerButtom>();
-        private List<string> answers = new List<string>();
+        private List<AnswerButtom> buttons;
 
         private Question currentQuestion;
 
+        private Quiz currentQuiz;
         private List<Question> questions;
+        
         #endregion
 
-        public FormQuiz(List<Question> _q)
+        public FormQuiz(Quiz quiz)
         {
-            this.questions = _q;
-            questionCount = _q.Count;
+            currentQuiz = quiz;
+            questions = quiz.Questions;
+            questionCount = questions.Count();
 
             InitializeComponent();
 
@@ -44,13 +46,16 @@ namespace QuizGUI1
             timerStartX = panelTimer.Location.X;
 
             timerAnswer.Interval = (showAnswerTime * 1000);
-            PopulateButtonList();
+
+            SetAnswerButtons();
+
             RandomQuestion();
         }
 
-        #region Init
-        private void PopulateButtonList()
+        private void SetAnswerButtons()
         {
+            buttons = new List<AnswerButtom>();
+
             buttons.Add(buttonA);
             buttons.Add(buttonB);
             buttons.Add(buttonC);
@@ -59,14 +64,12 @@ namespace QuizGUI1
             ResetButtons();
         }
 
-
-        #endregion
-
         private void EndQuiz()
         {
             timerAnswer.Stop();
             timerPytanie.Stop();
-            Close();
+
+            FormMain.Instance.SummaryQuiz(correctAnswers);
         }
 
         private void buttonEndQuiz_Click(object sender, EventArgs e)
@@ -86,7 +89,6 @@ namespace QuizGUI1
                 var rand = new Random();
                 var temp = questions.ElementAt(rand.Next(questions.Count));
                 currentQuestion = temp;
-                GetAnswersFromCurrent();
                 SetPytanie(temp);
                 questions.Remove(temp);
                 ResetTimer();
@@ -98,15 +100,6 @@ namespace QuizGUI1
             {
                 EndQuiz();
             }
-        }
-
-        private void GetAnswersFromCurrent()
-        {
-            answers.Clear();
-            answers.Add(currentQuestion.PoprawnaOdpowiedz);
-            answers.Add(currentQuestion.BlednaOdpowiedz1);
-            answers.Add(currentQuestion.BlednaOdpowiedz2);
-            answers.Add(currentQuestion.BlednaOdpowiedz3);
         }
 
         private void CheckAnswer(object sender, EventArgs e)
@@ -144,9 +137,15 @@ namespace QuizGUI1
         {
             labelPytanie.Text = current.Text;
 
-            #region buttons
             var tmpButtons = new List<AnswerButtom>(buttons);
-            var tmpAnswers = new List<string>(answers);
+
+            ResetButtons();
+
+            var tmpAnswers = new List<string>();
+            tmpAnswers.Add(currentQuestion.PoprawnaOdpowiedz);
+            tmpAnswers.Add(currentQuestion.BlednaOdpowiedz1);
+            tmpAnswers.Add(currentQuestion.BlednaOdpowiedz2);
+            tmpAnswers.Add(currentQuestion.BlednaOdpowiedz3);
 
             var rand = new Random();
 
@@ -160,7 +159,6 @@ namespace QuizGUI1
                 tmpAnswers.RemoveAt(numAnswer);
                 tmpButtons.RemoveAt(numButton);
             }
-            #endregion
         }
 
         private void SetButton(AnswerButtom button, string answer)
@@ -227,7 +225,7 @@ namespace QuizGUI1
 
         private void FormPytanie_FormClosed(object sender, FormClosedEventArgs e)
         {
-            FormMain.Instance.SummaryQuiz(correctAnswers);
+            
         }
     }
 }
