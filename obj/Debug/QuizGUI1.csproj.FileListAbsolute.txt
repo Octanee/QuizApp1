@@ -9,3 +9,15 @@ X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\obj\Debug\QuizGUI1.exe
 X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\obj\Debug\QuizGUI1.pdb
 X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\obj\Debug\QuizGUI1.FormMain.resources
 X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\obj\Debug\QuizGUI1.FormQuiz.resources
+D:\Programming\source\repos\GithubProjects\QuizApp1\obj\Debug\QuizGUI1.csprojAssemblyReference.cache
+D:\Programming\source\repos\GithubProjects\QuizApp1\obj\Debug\QuizGUI1.Forms.FormLogin.resources
+D:\Programming\source\repos\GithubProjects\QuizApp1\obj\Debug\QuizGUI1.FormMain.resources
+D:\Programming\source\repos\GithubProjects\QuizApp1\obj\Debug\QuizGUI1.FormQuiz.resources
+D:\Programming\source\repos\GithubProjects\QuizApp1\obj\Debug\QuizGUI1.Properties.Resources.resources
+D:\Programming\source\repos\GithubProjects\QuizApp1\obj\Debug\QuizGUI1.csproj.GenerateResource.cache
+D:\Programming\source\repos\GithubProjects\QuizApp1\obj\Debug\QuizGUI1.csproj.CoreCompileInputs.cache
+D:\Programming\source\repos\GithubProjects\QuizApp1\obj\Debug\QuizGUI1.exe
+D:\Programming\source\repos\GithubProjects\QuizApp1\obj\Debug\QuizGUI1.pdb
+D:\Programming\source\repos\GithubProjects\QuizApp1\bin\Debug\QuizGUI1.exe.config
+D:\Programming\source\repos\GithubProjects\QuizApp1\bin\Debug\QuizGUI1.exe
+D:\Programming\source\repos\GithubProjects\QuizApp1\bin\Debug\QuizGUI1.pdb
