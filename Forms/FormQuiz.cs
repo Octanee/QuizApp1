@@ -32,7 +32,7 @@ namespace QuizGUI1
 
         private Quiz currentQuiz;
         private List<Question> questions;
-        
+
         #endregion
 
         public FormQuiz(Quiz quiz)
@@ -75,11 +75,11 @@ namespace QuizGUI1
 
         private void buttonEndQuiz_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(this, "Czy napewno chcesz zakończyc QUIZ?", "ZAKOŃCZ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                EndQuiz();
-            }
+            // DialogResult result = MessageBox.Show(this, "Czy napewno chcesz zakończyc QUIZ?", "ZAKOŃCZ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (result == DialogResult.Yes)
+            //{
+            EndQuiz();
+            //    }
         }
 
         private void RandomQuestion()

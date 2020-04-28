@@ -25,6 +25,7 @@ namespace QuizGUI1
                 {
                     instance = new FormMain();
                 }
+
                 return instance;
             }
         }
@@ -35,7 +36,7 @@ namespace QuizGUI1
 
         public FormMain()
         {
-
+            instance = this;
             InitializeComponent();
 
             quiz = PopulateList(10);
@@ -79,7 +80,6 @@ namespace QuizGUI1
             panelParent.Controls.Add(form);
             activeForm = form;
 
-            form.BringToFront();
             form.Visible = true;
         }
 
@@ -90,6 +90,7 @@ namespace QuizGUI1
 
         public void ShowQuizResult()
         {
+            Console.WriteLine("SHOW");
             SetNewForm(new FormQuizResult());
         }
         #endregion
