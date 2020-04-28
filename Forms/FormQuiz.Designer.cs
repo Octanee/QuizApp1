@@ -181,7 +181,7 @@
             this.buttonA.UseVisualStyleBackColor = false;
             this.buttonA.Click += new System.EventHandler(this.CheckAnswer);
             // 
-            // FormPytanie
+            // FormQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -196,9 +196,8 @@
             this.Controls.Add(this.panelText);
             this.Controls.Add(this.panelImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormPytanie";
+            this.Name = "FormQuiz";
             this.Text = "FormPytanie";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormPytanie_FormClosed);
             this.panelImage.ResumeLayout(false);
             this.panelImage.PerformLayout();
             this.panelText.ResumeLayout(false);

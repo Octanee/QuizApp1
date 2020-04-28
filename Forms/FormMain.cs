@@ -30,31 +30,31 @@ namespace QuizGUI1
 
         #endregion
 
-        private List<Question> pytania;
+        private Quiz quiz;
 
         public FormMain()
         {
 
             InitializeComponent();
 
-            pytania = PopulateList(10);
+            quiz = PopulateList(10);
 
-            SetForm(new FormQuiz(pytania));
+            SetForm(new FormQuiz(quiz));
         }
 
-        private List<Question> PopulateList(int size)
+        private Quiz PopulateList(int size)
         {
-            var temp = new List<Question>();
+            var temp = new Quiz();
             for (int i = 0; i < size; i++)
             {
-                Question p = new Question();
-                p.Text = "Tekst pytania " + i;
-                p.PoprawnaOdpowiedz = "Poprawna odwowiedz";
-                p.BlednaOdpowiedz1 = "Bledna odpowiedz 1";
-                p.BlednaOdpowiedz2 = "Bledna odpowiedz 2";
-                p.BlednaOdpowiedz3 = "Bledna odpowiedz 3";
+                Question question = new Question();
+                question.Text = "Tekst pytania " + i;
+                question.PoprawnaOdpowiedz = "Poprawna odwowiedz";
+                question.BlednaOdpowiedz1 = "Bledna odpowiedz 1";
+                question.BlednaOdpowiedz2 = "Bledna odpowiedz 2";
+                question.BlednaOdpowiedz3 = "Bledna odpowiedz 3";
 
-                temp.Add(p);
+                temp.AddQuestion(question);
             }
 
             return temp;
@@ -78,7 +78,8 @@ namespace QuizGUI1
 
         public void SummaryQuiz(int points)
         {
-            MessageBox.Show("Zdobyte punkty: " + points);
+            MessageBox.Show(points);
+            SetForm(new FormQuizResult());
         }
 
 
@@ -124,10 +125,5 @@ namespace QuizGUI1
             WindowState = FormWindowState.Minimized;
         }
         #endregion
-
-        private void panelTop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
