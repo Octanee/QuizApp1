@@ -19,11 +19,7 @@ namespace QuizGUI1.Forms
 
         private void Form1_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            //komentarz xdd
-=======
 
->>>>>>> parent of 3df2f88... :cry:
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
