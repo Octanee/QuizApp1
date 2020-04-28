@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using QuizGUI1.source;
 
 namespace QuizGUI1
 {
@@ -222,10 +223,5 @@ namespace QuizGUI1
             panelTimer.Location = new Point(timerStartX, panelTimer.Location.Y);
         }
         #endregion
-
-        private void FormPytanie_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-        }
     }
 }

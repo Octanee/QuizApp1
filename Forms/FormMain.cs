@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuizGUI1.source;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,7 +40,7 @@ namespace QuizGUI1
 
             quiz = PopulateList(10);
 
-            SetForm(new FormQuiz(quiz));
+            SummaryQuiz(1);
         }
 
         private Quiz PopulateList(int size)
@@ -68,18 +69,27 @@ namespace QuizGUI1
             {
                 activeForm.Close();
                 activeForm = null;
+                Console.WriteLine("Close active");
             }
 
             activeForm = form;
             form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            form.FormBorderStyle = FormBorderStyle.None;
             panelParent.Controls.Add(form);
-            form.Show();
+            activeForm.Show();
+            activeForm.BringToFront();
+            Console.WriteLine("SetForm");
         }
 
         public void SummaryQuiz(int points)
         {
-            MessageBox.Show(points);
             SetForm(new FormQuizResult());
+        }
+        
+        public void StartQuiz(Quiz newQuiz)
+        {
+            SetForm(new FormQuiz(newQuiz));
         }
 
 

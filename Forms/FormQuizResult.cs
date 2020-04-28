@@ -15,6 +15,7 @@ namespace QuizGUI1
         public FormQuizResult()
         {
             InitializeComponent();
+            Console.WriteLine("Result");
         }
     }
 }
