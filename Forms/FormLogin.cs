@@ -19,7 +19,7 @@ namespace QuizGUI1.Forms
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //kom
+            //komentarz xdd
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
