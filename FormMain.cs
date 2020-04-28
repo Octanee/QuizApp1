@@ -124,5 +124,10 @@ namespace QuizGUI1
             WindowState = FormWindowState.Minimized;
         }
         #endregion
+
+        private void panelTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
