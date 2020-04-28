@@ -1,0 +1,11 @@
+X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\bin\Debug\QuizGUI1.exe.config
+X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\bin\Debug\QuizGUI1.exe
+X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\bin\Debug\QuizGUI1.pdb
+X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\obj\Debug\QuizGUI1.csprojAssemblyReference.cache
+X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\obj\Debug\QuizGUI1.Properties.Resources.resources
+X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\obj\Debug\QuizGUI1.csproj.GenerateResource.cache
+X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\obj\Debug\QuizGUI1.csproj.CoreCompileInputs.cache
+X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\obj\Debug\QuizGUI1.exe
+X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\obj\Debug\QuizGUI1.pdb
+X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\obj\Debug\QuizGUI1.FormMain.resources
+X:\VisualStudio\Projekt\QuizGUI1\QuizGUI1\obj\Debug\QuizGUI1.FormQuiz.resources
