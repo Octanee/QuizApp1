@@ -69,7 +69,6 @@ namespace QuizGUI1
             {
                 activeForm.Close();
                 activeForm = null;
-                Console.WriteLine("Close active");
             }
 
             activeForm = form;
@@ -79,7 +78,6 @@ namespace QuizGUI1
             panelParent.Controls.Add(form);
             activeForm.Show();
             activeForm.BringToFront();
-            Console.WriteLine("SetForm");
         }
 
         public void SummaryQuiz(int points)

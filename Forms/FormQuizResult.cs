@@ -15,7 +15,7 @@ namespace QuizGUI1
         public FormQuizResult()
         {
             InitializeComponent();
-            Console.WriteLine("");
+            Console.WriteLine("xD");
         }
 
         private void button1_Click(object sender, EventArgs e)
