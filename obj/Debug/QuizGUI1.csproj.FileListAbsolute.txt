@@ -10,3 +10,4 @@ X:\VisualStudio\Projekt\QuizGUI1\QuizApp1\obj\Debug\QuizGUI1.pdb
 X:\VisualStudio\Projekt\QuizGUI1\QuizApp1\bin\Debug\QuizGUI1.exe.config
 X:\VisualStudio\Projekt\QuizGUI1\QuizApp1\bin\Debug\QuizGUI1.exe
 X:\VisualStudio\Projekt\QuizGUI1\QuizApp1\bin\Debug\QuizGUI1.pdb
+X:\VisualStudio\Projekt\QuizGUI1\QuizApp1\obj\Debug\QuizGUI1.FormQuizResult.resources
