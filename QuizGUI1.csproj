@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Source\Answer.cs" />
-    <Compile Include="Source\CustomControls\AnswerButtom.cs">
+    <Compile Include="CustomControls\AnswerButtom.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\FormLogin.cs">
