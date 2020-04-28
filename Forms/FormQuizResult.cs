@@ -17,5 +17,10 @@ namespace QuizGUI1
             InitializeComponent();
             Console.WriteLine("Result");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormMain.Instance.StartQuiz(new source.Quiz());
+        }
     }
 }
