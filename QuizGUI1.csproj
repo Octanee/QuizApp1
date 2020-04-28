@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="source\Answer.cs" />
-    <Compile Include="source\AnswerButtom.cs">
+    <Compile Include="Source\Answer.cs" />
+    <Compile Include="Source\CustomControls\AnswerButtom.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\FormLogin.cs">
@@ -74,10 +74,10 @@
     <Compile Include="Forms\FormQuizResult.Designer.cs">
       <DependentUpon>FormQuizResult.cs</DependentUpon>
     </Compile>
-    <Compile Include="source\Program.cs" />
+    <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="source\Question.cs" />
-    <Compile Include="source\Quiz.cs" />
+    <Compile Include="Source\Question.cs" />
+    <Compile Include="Source\Quiz.cs" />
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,5 +112,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
