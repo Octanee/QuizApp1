@@ -19,7 +19,11 @@ namespace QuizGUI1.Forms
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Console.WriteLine("Jestem brzydki :c");
+            Console.WriteLine("Jestem brzydki :c");
+            Console.WriteLine("Jestem brzydki :c");
+            Console.WriteLine("Jestem brzydki :c");
+            Console.WriteLine("Jestem brzydki :c");
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
