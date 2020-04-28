@@ -70,7 +70,7 @@ namespace QuizGUI1
             timerAnswer.Stop();
             timerPytanie.Stop();
 
-            FormMain.Instance.SummaryQuiz(correctAnswers);
+            FormMain.Instance.ShowQuizResult();
         }
 
         private void buttonEndQuiz_Click(object sender, EventArgs e)
@@ -223,5 +223,10 @@ namespace QuizGUI1
             panelTimer.Location = new Point(timerStartX, panelTimer.Location.Y);
         }
         #endregion
+
+        private void FormQuiz_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -81,9 +81,11 @@
             // 
             // panelParent
             // 
-            this.panelParent.Location = new System.Drawing.Point(12, 31);
+            this.panelParent.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panelParent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelParent.Location = new System.Drawing.Point(0, 25);
             this.panelParent.Name = "panelParent";
-            this.panelParent.Size = new System.Drawing.Size(776, 457);
+            this.panelParent.Size = new System.Drawing.Size(800, 475);
             this.panelParent.TabIndex = 1;
             // 
             // FormMain
@@ -98,6 +100,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMain";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelTop.ResumeLayout(false);
             this.ResumeLayout(false);
 

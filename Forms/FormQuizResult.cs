@@ -15,12 +15,11 @@ namespace QuizGUI1
         public FormQuizResult()
         {
             InitializeComponent();
-            Console.WriteLine("xD");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormMain.Instance.StartQuiz(new source.Quiz());
+            FormMain.Instance.StartNewQuiz(new source.Quiz());
         }
     }
 }

@@ -39,8 +39,6 @@ namespace QuizGUI1
             InitializeComponent();
 
             quiz = PopulateList(10);
-
-            SummaryQuiz(1);
         }
 
         private Quiz PopulateList(int size)
@@ -61,35 +59,40 @@ namespace QuizGUI1
             return temp;
         }
 
-        private Form activeForm = null;
 
-        private void SetForm(Form form)
+        #region ActiveForm
+        private Form activeForm;
+
+        private void SetNewForm(Form form)
         {
             if (activeForm != null)
             {
+                panelParent.Controls.Remove(activeForm);
                 activeForm.Close();
-                activeForm = null;
+                activeForm.Dispose();
             }
 
-            activeForm = form;
             form.TopLevel = false;
-            form.Dock = DockStyle.Fill;
             form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+
             panelParent.Controls.Add(form);
-            activeForm.Show();
-            activeForm.BringToFront();
+            activeForm = form;
+
+            form.BringToFront();
+            form.Visible = true;
         }
 
-        public void SummaryQuiz(int points)
+        public void StartNewQuiz(Quiz newQuiz)
         {
-            SetForm(new FormQuizResult());
-        }
-        
-        public void StartQuiz(Quiz newQuiz)
-        {
-            SetForm(new FormQuiz(newQuiz));
+            SetNewForm(new FormQuiz(newQuiz));
         }
 
+        public void ShowQuizResult()
+        {
+            SetNewForm(new FormQuizResult());
+        }
+        #endregion
 
         #region MouseMovement 
 
@@ -117,7 +120,7 @@ namespace QuizGUI1
         }
         #endregion
 
-        #region Przyciski
+        #region Buttons
         private void buttonClose_Click(object sender, EventArgs e)
         {
             Close();
@@ -133,5 +136,10 @@ namespace QuizGUI1
             WindowState = FormWindowState.Minimized;
         }
         #endregion
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            StartNewQuiz(quiz);
+        }
     }
 }

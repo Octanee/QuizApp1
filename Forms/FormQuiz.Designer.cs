@@ -198,6 +198,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormQuiz";
             this.Text = "FormPytanie";
+            this.Load += new System.EventHandler(this.FormQuiz_Load);
             this.panelImage.ResumeLayout(false);
             this.panelImage.PerformLayout();
             this.panelText.ResumeLayout(false);
