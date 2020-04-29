@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace QuizGUI1.CustomControls
 {
-    public class EllipseButton : Button
+    public class RoundedButton : Button
     {
         #region Properties
         private Color borderColor = Color.Silver;
@@ -24,7 +24,7 @@ namespace QuizGUI1.CustomControls
         private int borderThicknessByTwo = 1;
         #endregion
 
-        public EllipseButton()
+        public RoundedButton()
         {
             DoubleBuffered = true;
             MouseEnter += (sender, e) =>

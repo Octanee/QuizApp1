@@ -119,7 +119,10 @@
             // 
             // buttonD
             // 
-            this.buttonD.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonD.BackColor = System.Drawing.Color.Transparent;
+            this.buttonD.BorderColor = System.Drawing.Color.Silver;
+            this.buttonD.BorderThickness = 2;
+            this.buttonD.ButtonColor = System.Drawing.Color.Red;
             this.buttonD.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.buttonD.FlatAppearance.BorderSize = 0;
             this.buttonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -127,15 +130,22 @@
             this.buttonD.isCorrect = false;
             this.buttonD.Location = new System.Drawing.Point(391, 363);
             this.buttonD.Name = "buttonD";
+            this.buttonD.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.buttonD.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.buttonD.OnHoverTextColor = System.Drawing.Color.Gray;
             this.buttonD.Size = new System.Drawing.Size(373, 65);
             this.buttonD.TabIndex = 12;
             this.buttonD.Text = "D";
+            this.buttonD.TextColor = System.Drawing.Color.White;
             this.buttonD.UseVisualStyleBackColor = false;
             this.buttonD.Click += new System.EventHandler(this.CheckAnswer);
             // 
             // buttonC
             // 
-            this.buttonC.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonC.BackColor = System.Drawing.Color.Transparent;
+            this.buttonC.BorderColor = System.Drawing.Color.Silver;
+            this.buttonC.BorderThickness = 2;
+            this.buttonC.ButtonColor = System.Drawing.Color.Red;
             this.buttonC.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.buttonC.FlatAppearance.BorderSize = 0;
             this.buttonC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -143,15 +153,22 @@
             this.buttonC.isCorrect = false;
             this.buttonC.Location = new System.Drawing.Point(12, 363);
             this.buttonC.Name = "buttonC";
+            this.buttonC.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.buttonC.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.buttonC.OnHoverTextColor = System.Drawing.Color.Gray;
             this.buttonC.Size = new System.Drawing.Size(373, 65);
             this.buttonC.TabIndex = 11;
             this.buttonC.Text = "C";
+            this.buttonC.TextColor = System.Drawing.Color.White;
             this.buttonC.UseVisualStyleBackColor = false;
             this.buttonC.Click += new System.EventHandler(this.CheckAnswer);
             // 
             // buttonB
             // 
-            this.buttonB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonB.BackColor = System.Drawing.Color.Transparent;
+            this.buttonB.BorderColor = System.Drawing.Color.Silver;
+            this.buttonB.BorderThickness = 2;
+            this.buttonB.ButtonColor = System.Drawing.Color.Red;
             this.buttonB.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.buttonB.FlatAppearance.BorderSize = 0;
             this.buttonB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -159,15 +176,22 @@
             this.buttonB.isCorrect = false;
             this.buttonB.Location = new System.Drawing.Point(391, 292);
             this.buttonB.Name = "buttonB";
+            this.buttonB.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.buttonB.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.buttonB.OnHoverTextColor = System.Drawing.Color.Gray;
             this.buttonB.Size = new System.Drawing.Size(373, 65);
             this.buttonB.TabIndex = 10;
             this.buttonB.Text = "B";
+            this.buttonB.TextColor = System.Drawing.Color.White;
             this.buttonB.UseVisualStyleBackColor = false;
             this.buttonB.Click += new System.EventHandler(this.CheckAnswer);
             // 
             // buttonA
             // 
-            this.buttonA.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonA.BackColor = System.Drawing.Color.Transparent;
+            this.buttonA.BorderColor = System.Drawing.Color.Silver;
+            this.buttonA.BorderThickness = 2;
+            this.buttonA.ButtonColor = System.Drawing.Color.Red;
             this.buttonA.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.buttonA.FlatAppearance.BorderSize = 0;
             this.buttonA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -175,9 +199,13 @@
             this.buttonA.isCorrect = false;
             this.buttonA.Location = new System.Drawing.Point(12, 292);
             this.buttonA.Name = "buttonA";
+            this.buttonA.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.buttonA.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.buttonA.OnHoverTextColor = System.Drawing.Color.Gray;
             this.buttonA.Size = new System.Drawing.Size(373, 65);
             this.buttonA.TabIndex = 9;
             this.buttonA.Text = "A";
+            this.buttonA.TextColor = System.Drawing.Color.White;
             this.buttonA.UseVisualStyleBackColor = false;
             this.buttonA.Click += new System.EventHandler(this.CheckAnswer);
             // 

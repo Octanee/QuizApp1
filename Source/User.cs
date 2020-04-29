@@ -24,5 +24,10 @@ namespace QuizGUI1.Source
 			set { password = value; }
 		}
 
+		public User(string login, string password)
+		{
+			this.login = login;
+			this.password = password;
+		}
 	}
 }

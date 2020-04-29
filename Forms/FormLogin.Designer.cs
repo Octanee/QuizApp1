@@ -30,27 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.panelTop = new System.Windows.Forms.Panel();
+            this.buttonClose = new QuizGUI1.CustomControls.RoundedButton();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ellipseButton2 = new QuizGUI1.CustomControls.EllipseButton();
-            this.ellipseButton1 = new QuizGUI1.CustomControls.EllipseButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ellipseButton3 = new QuizGUI1.CustomControls.EllipseButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonRegistration = new QuizGUI1.CustomControls.RoundedButton();
+            this.buttonLogin = new QuizGUI1.CustomControls.RoundedButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panelTop.Controls.Add(this.ellipseButton3);
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(148)))), ((int)(((byte)(215)))));
+            this.panelTop.Controls.Add(this.buttonClose);
             this.panelTop.Controls.Add(this.label1);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
@@ -60,6 +60,26 @@
             this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseDown);
             this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseMove);
             this.panelTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseUp);
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(146)))), ((int)(((byte)(214)))));
+            this.buttonClose.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonClose.BorderThickness = 0;
+            this.buttonClose.ButtonColor = System.Drawing.Color.Transparent;
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Location = new System.Drawing.Point(277, 3);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.buttonClose.OnHoverButtonColor = System.Drawing.Color.Transparent;
+            this.buttonClose.OnHoverTextColor = System.Drawing.Color.Black;
+            this.buttonClose.Size = new System.Drawing.Size(20, 20);
+            this.buttonClose.TabIndex = 2;
+            this.buttonClose.Text = "X";
+            this.buttonClose.TextColor = System.Drawing.Color.Black;
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.ellipseButton3_Click);
             // 
             // label1
             // 
@@ -98,97 +118,31 @@
             this.panel3.Size = new System.Drawing.Size(276, 3);
             this.panel3.TabIndex = 6;
             // 
-            // textBox1
+            // textBoxPassword
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(53, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(238, 29);
-            this.textBox1.TabIndex = 4;
+            this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxPassword.Location = new System.Drawing.Point(53, 123);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(238, 29);
+            this.textBoxPassword.TabIndex = 4;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.ellipseButton2);
-            this.panel1.Controls.Add(this.ellipseButton1);
+            this.panel1.Controls.Add(this.buttonRegistration);
+            this.panel1.Controls.Add(this.buttonLogin);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.textBoxLogin);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxPassword);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 150);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 350);
             this.panel1.TabIndex = 1;
-            // 
-            // ellipseButton2
-            // 
-            this.ellipseButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.ellipseButton2.BorderThickness = 0;
-            this.ellipseButton2.ButtonColor = System.Drawing.Color.RoyalBlue;
-            this.ellipseButton2.FlatAppearance.BorderSize = 0;
-            this.ellipseButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ellipseButton2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ellipseButton2.Location = new System.Drawing.Point(15, 284);
-            this.ellipseButton2.Name = "ellipseButton2";
-            this.ellipseButton2.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.ellipseButton2.OnHoverButtonColor = System.Drawing.Color.CornflowerBlue;
-            this.ellipseButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.ellipseButton2.Size = new System.Drawing.Size(273, 40);
-            this.ellipseButton2.TabIndex = 10;
-            this.ellipseButton2.Text = "Registration";
-            this.ellipseButton2.TextColor = System.Drawing.Color.White;
-            this.ellipseButton2.UseVisualStyleBackColor = true;
-            // 
-            // ellipseButton1
-            // 
-            this.ellipseButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.ellipseButton1.BorderThickness = 0;
-            this.ellipseButton1.ButtonColor = System.Drawing.Color.RoyalBlue;
-            this.ellipseButton1.FlatAppearance.BorderSize = 0;
-            this.ellipseButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ellipseButton1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ellipseButton1.Location = new System.Drawing.Point(15, 226);
-            this.ellipseButton1.Name = "ellipseButton1";
-            this.ellipseButton1.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.ellipseButton1.OnHoverButtonColor = System.Drawing.Color.CornflowerBlue;
-            this.ellipseButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.ellipseButton1.Size = new System.Drawing.Size(273, 40);
-            this.ellipseButton1.TabIndex = 9;
-            this.ellipseButton1.Text = "Log in";
-            this.ellipseButton1.TextColor = System.Drawing.Color.White;
-            this.ellipseButton1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(15, 124);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // ellipseButton3
-            // 
-            this.ellipseButton3.BorderColor = System.Drawing.Color.Transparent;
-            this.ellipseButton3.BorderThickness = 0;
-            this.ellipseButton3.ButtonColor = System.Drawing.Color.Transparent;
-            this.ellipseButton3.FlatAppearance.BorderSize = 0;
-            this.ellipseButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ellipseButton3.Location = new System.Drawing.Point(277, 3);
-            this.ellipseButton3.Name = "ellipseButton3";
-            this.ellipseButton3.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.ellipseButton3.OnHoverButtonColor = System.Drawing.Color.Transparent;
-            this.ellipseButton3.OnHoverTextColor = System.Drawing.Color.Black;
-            this.ellipseButton3.Size = new System.Drawing.Size(20, 20);
-            this.ellipseButton3.TabIndex = 2;
-            this.ellipseButton3.Text = "X";
-            this.ellipseButton3.TextColor = System.Drawing.Color.Black;
-            this.ellipseButton3.UseVisualStyleBackColor = true;
-            this.ellipseButton3.Click += new System.EventHandler(this.ellipseButton3_Click);
             // 
             // pictureBox1
             // 
@@ -199,6 +153,55 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // buttonRegistration
+            // 
+            this.buttonRegistration.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonRegistration.BorderThickness = 0;
+            this.buttonRegistration.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(146)))), ((int)(((byte)(214)))));
+            this.buttonRegistration.FlatAppearance.BorderSize = 0;
+            this.buttonRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRegistration.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonRegistration.Location = new System.Drawing.Point(15, 284);
+            this.buttonRegistration.Name = "buttonRegistration";
+            this.buttonRegistration.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.buttonRegistration.OnHoverButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonRegistration.OnHoverTextColor = System.Drawing.Color.White;
+            this.buttonRegistration.Size = new System.Drawing.Size(276, 40);
+            this.buttonRegistration.TabIndex = 10;
+            this.buttonRegistration.Text = "Registration";
+            this.buttonRegistration.TextColor = System.Drawing.Color.White;
+            this.buttonRegistration.UseVisualStyleBackColor = true;
+            // 
+            // buttonLogin
+            // 
+            this.buttonLogin.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonLogin.BorderThickness = 0;
+            this.buttonLogin.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(146)))), ((int)(((byte)(214)))));
+            this.buttonLogin.FlatAppearance.BorderSize = 0;
+            this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogin.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonLogin.Location = new System.Drawing.Point(15, 226);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.buttonLogin.OnHoverButtonColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonLogin.OnHoverTextColor = System.Drawing.Color.White;
+            this.buttonLogin.Size = new System.Drawing.Size(276, 40);
+            this.buttonLogin.TabIndex = 9;
+            this.buttonLogin.Text = "Log in";
+            this.buttonLogin.TextColor = System.Drawing.Color.White;
+            this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(15, 123);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,15 +211,17 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(300, 150);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quiz - Logowanie";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormLogin_KeyDown);
             this.panelTop.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -228,12 +233,12 @@
         private System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private CustomControls.EllipseButton ellipseButton1;
-        private CustomControls.EllipseButton ellipseButton2;
-        private CustomControls.EllipseButton ellipseButton3;
+        private CustomControls.RoundedButton buttonLogin;
+        private CustomControls.RoundedButton buttonRegistration;
+        private CustomControls.RoundedButton buttonClose;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

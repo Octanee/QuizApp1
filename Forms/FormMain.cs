@@ -1,4 +1,7 @@
-﻿using QuizGUI1.source;
+﻿using QuizGUI1.CustomControls;
+using QuizGUI1.Forms;
+using QuizGUI1.source;
+using QuizGUI1.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,16 +34,19 @@ namespace QuizGUI1
         }
 
         #endregion
+        private List<Control> menuButtons;
 
         private Quiz quiz;
 
         public FormMain()
         {
-            instance = this;
             InitializeComponent();
 
+            menuButtons = GetAll(this, typeof(MenuButton)).ToList();
+            UncheckAllMenuButtons();
             quiz = PopulateList(10);
         }
+
 
         private Quiz PopulateList(int size)
         {
@@ -60,38 +66,33 @@ namespace QuizGUI1
             return temp;
         }
 
-
-        #region ActiveForm
-        private Form activeForm;
-
-        private void SetNewForm(Form form)
+        private void StartQuiz()
         {
-            if (activeForm != null)
+            ShowUserControl(QuizUC.Instance);
+        }
+
+        #region UserControl
+        private void ShowUserControl(UserControl control)
+        {
+            if (!panelParent.Controls.Contains(control))
             {
-                panelParent.Controls.Remove(activeForm);
-                activeForm.Close();
-                activeForm.Dispose();
+                AddNewControl(control);
             }
-
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-
-            panelParent.Controls.Add(form);
-            activeForm = form;
-
-            form.Visible = true;
+            control.BringToFront();
         }
 
-        public void StartNewQuiz(Quiz newQuiz)
+        private void AddNewControl(UserControl control)
         {
-            SetNewForm(new FormQuiz(newQuiz));
+            panelParent.Controls.Add(control);
+            control.Dock = DockStyle.Fill;
         }
 
-        public void ShowQuizResult()
+        private void RemoveControl(UserControl control)
         {
-            Console.WriteLine("SHOW");
-            SetNewForm(new FormQuizResult());
+            if (panelParent.Controls.Contains(control))
+            {
+                panelParent.Controls.Remove(control);
+            }
         }
         #endregion
 
@@ -121,15 +122,10 @@ namespace QuizGUI1
         }
         #endregion
 
-        #region Buttons
+        #region FunctionalButtons
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            Close();
-        }
-
-        private void buttonMaximize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
+            FormLogin.Instance.Close();
         }
 
         private void buttonMinimize_Click(object sender, EventArgs e)
@@ -138,9 +134,31 @@ namespace QuizGUI1
         }
         #endregion
 
-        private void FormMain_Load(object sender, EventArgs e)
+        #region Menu
+
+        private void menuButton1_Click(object sender, EventArgs e)
         {
-            StartNewQuiz(quiz);
+            menuButton1.IsChosen = true;
+            ShowUserControl(QuizUC.Instance);
         }
+
+        private void UncheckAllMenuButtons()
+        {
+            foreach (MenuButton button in menuButtons)
+            {
+                button.IsChosen = false; 
+            }
+        }
+
+        public IEnumerable<Control> GetAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
+        }
+        #endregion
+
     }
 }

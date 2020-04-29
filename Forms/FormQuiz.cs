@@ -69,8 +69,6 @@ namespace QuizGUI1
         {
             timerAnswer.Stop();
             timerPytanie.Stop();
-
-            FormMain.Instance.ShowQuizResult();
         }
 
         private void buttonEndQuiz_Click(object sender, EventArgs e)

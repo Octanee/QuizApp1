@@ -46,7 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomControls\EllipseButton.cs">
+    <Compile Include="CustomControls\MenuButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -76,16 +79,16 @@
     <Compile Include="Forms\FormQuiz.Designer.cs">
       <DependentUpon>FormQuiz.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormQuizResult.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormQuizResult.Designer.cs">
-      <DependentUpon>FormQuizResult.cs</DependentUpon>
-    </Compile>
     <Compile Include="Source\Program.cs" />
     <Compile Include="Source\Question.cs" />
     <Compile Include="Source\Quiz.cs" />
     <Compile Include="Source\User.cs" />
+    <Compile Include="UserControls\QuizUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\QuizUC.Designer.cs">
+      <DependentUpon>QuizUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,12 +98,12 @@
     <EmbeddedResource Include="Forms\FormQuiz.resx">
       <DependentUpon>FormQuiz.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormQuizResult.resx">
-      <DependentUpon>FormQuizResult.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\QuizUC.resx">
+      <DependentUpon>QuizUC.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

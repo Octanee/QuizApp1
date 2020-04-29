@@ -1,16 +1,16 @@
-﻿namespace QuizGUI1
+﻿namespace QuizGUI1.UserControls
 {
-    partial class FormQuizResult
+    partial class QuizUC
     {
-        /// <summary>
-        /// Required designer variable.
+        /// <summary> 
+        /// Wymagana zmienna projektanta.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
+        /// <summary> 
+        /// Wyczyść wszystkie używane zasoby.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">prawda, jeżeli zarządzane zasoby powinny zostać zlikwidowane; Fałsz w przeciwnym wypadku.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Kod wygenerowany przez Projektanta składników
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// <summary> 
+        /// Metoda wymagana do obsługi projektanta — nie należy modyfikować 
+        /// jej zawartości w edytorze kodu.
         /// </summary>
         private void InitializeComponent()
         {
@@ -33,23 +33,20 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(275, 200);
+            this.button1.Location = new System.Drawing.Point(553, 308);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // FormQuizResult
+            // QuizUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 457);
             this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormQuizResult";
-            this.Text = "FormQuizResult";
+            this.Name = "QuizUC";
+            this.Size = new System.Drawing.Size(1000, 770);
             this.ResumeLayout(false);
 
         }
