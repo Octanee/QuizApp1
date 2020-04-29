@@ -49,6 +49,11 @@
     <Compile Include="CustomControls\RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Source\Answer.cs" />
     <Compile Include="CustomControls\AnswerButtom.cs">
       <SubType>Component</SubType>
@@ -93,12 +98,14 @@
     <EmbeddedResource Include="Forms\FormQuizResult.resx">
       <DependentUpon>FormQuizResult.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
