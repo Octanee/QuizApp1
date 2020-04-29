@@ -23,34 +23,35 @@ namespace QuizGUI1.Forms
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        #region MouseMovement 
 
+        private bool dragging;
+        private Point mouse;
+
+        private void panelTop_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            mouse = e.Location;
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void panelTop_MouseMove(object sender, MouseEventArgs e)
         {
-            Close();
+            if (dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - mouse.X, p.Y - mouse.Y);
+            }
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void panelTop_MouseUp(object sender, MouseEventArgs e)
         {
-
+            dragging = false;
         }
+        #endregion
 
-        private void textBoxLogin_TextChanged(object sender, EventArgs e)
+        private void ellipseButton3_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }
