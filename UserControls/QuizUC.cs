@@ -8,25 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuizGUI1.source;
+using QuizGUI1.CustomControls;
 
 namespace QuizGUI1.UserControls
 {
     public partial class QuizUC : UserControl
     {
         #region Singleton
+
         private static QuizUC instance;
 
         public static QuizUC Instance
         {
-            get
-            {
+            get {
                 if (instance == null)
                 {
                     instance = new QuizUC();
                 }
-                return instance;
+                return instance; 
             }
         }
+
         #endregion
 
         #region Properties
