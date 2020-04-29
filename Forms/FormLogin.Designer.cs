@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.panelSignIn = new System.Windows.Forms.Panel();
-            this.btnClose = new QuizGUI1.CustomControls.RoundButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new QuizGUI1.CustomControls.RoundButton();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSignIn.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSignIn
@@ -50,6 +52,17 @@
             this.panelSignIn.Name = "panelSignIn";
             this.panelSignIn.Size = new System.Drawing.Size(300, 150);
             this.panelSignIn.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(0, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(300, 55);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Sign In";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnClose
             // 
@@ -65,37 +78,20 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(0, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 55);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Sign In";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // textBoxLogin
             // 
             this.textBoxLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxLogin.Location = new System.Drawing.Point(56, 197);
+            this.textBoxLogin.Location = new System.Drawing.Point(56, 63);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(232, 25);
             this.textBoxLogin.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(12, 197);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(32, 32);
-            this.panel1.TabIndex = 2;
+            this.textBoxLogin.TextChanged += new System.EventHandler(this.textBoxLogin_TextChanged);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
-            this.panel2.Location = new System.Drawing.Point(15, 226);
+            this.panel2.Location = new System.Drawing.Point(15, 92);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(276, 3);
             this.panel2.TabIndex = 3;
@@ -103,26 +99,43 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DimGray;
-            this.panel3.Location = new System.Drawing.Point(15, 289);
+            this.panel3.Location = new System.Drawing.Point(15, 155);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(276, 3);
             this.panel3.TabIndex = 6;
-            // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(12, 260);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(32, 32);
-            this.panel4.TabIndex = 5;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(56, 260);
+            this.textBox1.Location = new System.Drawing.Point(56, 130);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(232, 25);
             this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.textBoxLogin);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 150);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 350);
+            this.panel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(15, 60);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 32);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormLogin
             // 
@@ -130,12 +143,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(300, 500);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBoxLogin);
             this.Controls.Add(this.panelSignIn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(300, 150);
@@ -144,8 +152,10 @@
             this.Text = "Quiz - Logowanie";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelSignIn.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -155,10 +165,10 @@
         private CustomControls.RoundButton btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxLogin;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
