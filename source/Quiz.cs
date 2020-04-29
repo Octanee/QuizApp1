@@ -15,7 +15,13 @@ namespace QuizGUI1.source
 			get { return name; }
 			set { name = value; }
 		}
+		private QuizCategory category;
 
+		public QuizCategory Category
+		{
+			get { return category; }
+			set { category = value; }
+		}
 
 		private List<Question> questions = new List<Question>();
 
@@ -29,5 +35,16 @@ namespace QuizGUI1.source
 		{
 			questions.Add(question);
 		}
+	}
+
+	public enum QuizCategory
+	{
+		Math,
+		History,
+		Art,
+		Geography,
+		Music,
+		Sport,
+		Science
 	}
 }

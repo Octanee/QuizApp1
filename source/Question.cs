@@ -9,7 +9,8 @@ namespace QuizGUI1
     public class Question
     {
 
-        #region Zmienne
+        #region Properties
+
         private string text;
 
 		public string Text
@@ -18,44 +19,36 @@ namespace QuizGUI1
 			set { text = value; }
 		}
 
-		private string poprawnaOdpowiedz;
+		private string correctAnswer;
 
-		public string PoprawnaOdpowiedz
+		public string CorrectAnswer
 		{
-			get { return poprawnaOdpowiedz; }
-			set { poprawnaOdpowiedz = value; }
+			get { return correctAnswer; }
+			set { correctAnswer = value; }
 		}
 
-		private string blednaOdpowiedz1;
+		private string incorrectAnswer1;
 
-		public string BlednaOdpowiedz1
+		public string IncorrectAnswer1
 		{
-			get { return blednaOdpowiedz1; }
-			set { blednaOdpowiedz1 = value; }
+			get { return incorrectAnswer1; }
+			set { incorrectAnswer1 = value; }
 		}
-		private string blednaOdpowiedz2;
+		private string incorrectAnswer2;
 
-		public string BlednaOdpowiedz2
+		public string IncorrectAnswer2
 		{
-			get { return blednaOdpowiedz2; }
-			set { blednaOdpowiedz2 = value; }
+			get { return incorrectAnswer2; }
+			set { incorrectAnswer2 = value; }
 		}
-		private string blednaOdpowiedz3;
+		private string incorrectAnswer3;
 
-		public string BlednaOdpowiedz3
+		public string IncorrectAnswer3
 		{
-			get { return blednaOdpowiedz3; }
-			set { blednaOdpowiedz3 = value; }
+			get { return incorrectAnswer3; }
+			set { incorrectAnswer3 = value; }
 		}
-		/*
-		private Image grafika;
 
-		public Image Grafika
-		{
-			get { return grafika; }
-			set { grafika = value; }
-		}
-		*/
 		#endregion
 	}
 }

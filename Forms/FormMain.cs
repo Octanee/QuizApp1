@@ -34,7 +34,6 @@ namespace QuizGUI1
         }
 
         #endregion
-        private List<Control> menuButtons;
 
         private Quiz quiz;
 
@@ -42,9 +41,9 @@ namespace QuizGUI1
         {
             InitializeComponent();
 
-            menuButtons = GetAll(this, typeof(MenuButton)).ToList();
-            UncheckAllMenuButtons();
             quiz = PopulateList(10);
+
+            ShowMenu();
         }
 
 
@@ -55,10 +54,10 @@ namespace QuizGUI1
             {
                 Question question = new Question();
                 question.Text = "Tekst pytania " + i;
-                question.PoprawnaOdpowiedz = "Poprawna odwowiedz";
-                question.BlednaOdpowiedz1 = "Bledna odpowiedz 1";
-                question.BlednaOdpowiedz2 = "Bledna odpowiedz 2";
-                question.BlednaOdpowiedz3 = "Bledna odpowiedz 3";
+                question.CorrectAnswer = "Poprawna odwowiedz";
+                question.IncorrectAnswer1 = "Bledna odpowiedz 1";
+                question.IncorrectAnswer2 = "Bledna odpowiedz 2";
+                question.IncorrectAnswer3 = "Bledna odpowiedz 3";
 
                 temp.AddQuestion(question);
             }
@@ -66,33 +65,33 @@ namespace QuizGUI1
             return temp;
         }
 
+        #region UserControl
+        private void ShowUserControl(UserControl control)
+        {
+            if (!panelUC.Controls.Contains(control))
+            {
+                panelUC.Controls.Add(control);
+                control.Dock = DockStyle.Fill;
+            }
+            control.BringToFront();
+        }
+
+        private void RemoveControl(UserControl control)
+        {
+            if (panelUC.Controls.Contains(control))
+            {
+                panelUC.Controls.Remove(control);
+            }
+        }
+
         private void StartQuiz()
         {
             ShowUserControl(QuizUC.Instance);
         }
 
-        #region UserControl
-        private void ShowUserControl(UserControl control)
+        private void ShowMenu()
         {
-            if (!panelParent.Controls.Contains(control))
-            {
-                AddNewControl(control);
-            }
-            control.BringToFront();
-        }
-
-        private void AddNewControl(UserControl control)
-        {
-            panelParent.Controls.Add(control);
-            control.Dock = DockStyle.Fill;
-        }
-
-        private void RemoveControl(UserControl control)
-        {
-            if (panelParent.Controls.Contains(control))
-            {
-                panelParent.Controls.Remove(control);
-            }
+            ShowUserControl(MenuUC.Instance);
         }
         #endregion
 
@@ -125,6 +124,7 @@ namespace QuizGUI1
         #region FunctionalButtons
         private void buttonClose_Click(object sender, EventArgs e)
         {
+            this.Close();
             FormLogin.Instance.Close();
         }
 
@@ -136,29 +136,34 @@ namespace QuizGUI1
 
         #region Menu
 
-        private void menuButton1_Click(object sender, EventArgs e)
+
+        
+
+        private void mButtonDashboard_Click(object sender, EventArgs e)
         {
-            menuButton1.IsChosen = true;
-            ShowUserControl(QuizUC.Instance);
+
         }
 
-        private void UncheckAllMenuButtons()
+        private void mButtonNewQuiz_Click(object sender, EventArgs e)
         {
-            foreach (MenuButton button in menuButtons)
-            {
-                button.IsChosen = false; 
-            }
+
         }
 
-        public IEnumerable<Control> GetAll(Control control, Type type)
+        private void mButtonListOfQuizzes_Click(object sender, EventArgs e)
         {
-            var controls = control.Controls.Cast<Control>();
 
-            return controls.SelectMany(ctrl => GetAll(ctrl, type))
-                                      .Concat(controls)
-                                      .Where(c => c.GetType() == type);
         }
+
+        private void mButtonLeaderboard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SetSidePanel()
+        {
+
+        }
+
         #endregion
-
     }
 }

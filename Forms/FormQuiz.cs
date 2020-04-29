@@ -141,10 +141,10 @@ namespace QuizGUI1
             ResetButtons();
 
             var tmpAnswers = new List<string>();
-            tmpAnswers.Add(currentQuestion.PoprawnaOdpowiedz);
-            tmpAnswers.Add(currentQuestion.BlednaOdpowiedz1);
-            tmpAnswers.Add(currentQuestion.BlednaOdpowiedz2);
-            tmpAnswers.Add(currentQuestion.BlednaOdpowiedz3);
+            tmpAnswers.Add(currentQuestion.CorrectAnswer);
+            tmpAnswers.Add(currentQuestion.IncorrectAnswer1);
+            tmpAnswers.Add(currentQuestion.IncorrectAnswer2);
+            tmpAnswers.Add(currentQuestion.IncorrectAnswer3);
 
             var rand = new Random();
 
@@ -163,7 +163,7 @@ namespace QuizGUI1
         private void SetButton(AnswerButtom button, string answer)
         {
             button.Text = answer;
-            if (answer == currentQuestion.PoprawnaOdpowiedz)
+            if (answer == currentQuestion.CorrectAnswer)
             {
                 button.isCorrect = true;
             }

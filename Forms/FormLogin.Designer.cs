@@ -49,7 +49,7 @@
             // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(148)))), ((int)(((byte)(215)))));
+            this.panelTop.BackColor = System.Drawing.Color.RoyalBlue;
             this.panelTop.Controls.Add(this.buttonClose);
             this.panelTop.Controls.Add(this.label1);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -63,7 +63,7 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(146)))), ((int)(((byte)(214)))));
+            this.buttonClose.BackColor = System.Drawing.Color.Transparent;
             this.buttonClose.BorderColor = System.Drawing.Color.Transparent;
             this.buttonClose.BorderThickness = 0;
             this.buttonClose.ButtonColor = System.Drawing.Color.Transparent;
@@ -157,7 +157,7 @@
             // 
             this.buttonRegistration.BorderColor = System.Drawing.Color.Transparent;
             this.buttonRegistration.BorderThickness = 0;
-            this.buttonRegistration.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(146)))), ((int)(((byte)(214)))));
+            this.buttonRegistration.ButtonColor = System.Drawing.Color.RoyalBlue;
             this.buttonRegistration.FlatAppearance.BorderSize = 0;
             this.buttonRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegistration.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -176,7 +176,7 @@
             // 
             this.buttonLogin.BorderColor = System.Drawing.Color.Transparent;
             this.buttonLogin.BorderThickness = 0;
-            this.buttonLogin.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(146)))), ((int)(((byte)(214)))));
+            this.buttonLogin.ButtonColor = System.Drawing.Color.RoyalBlue;
             this.buttonLogin.FlatAppearance.BorderSize = 0;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));

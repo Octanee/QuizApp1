@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,9 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomControls\MenuButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="CustomControls\RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -83,6 +81,24 @@
     <Compile Include="Source\Question.cs" />
     <Compile Include="Source\Quiz.cs" />
     <Compile Include="Source\User.cs" />
+    <Compile Include="UserControls\Item_ListOfQuizzes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Item_ListOfQuizzes.Designer.cs">
+      <DependentUpon>Item_ListOfQuizzes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ListOfQuizzes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ListOfQuizzes.Designer.cs">
+      <DependentUpon>ListOfQuizzes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MenuUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MenuUC.Designer.cs">
+      <DependentUpon>MenuUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\QuizUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,6 +117,15 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Item_ListOfQuizzes.resx">
+      <DependentUpon>Item_ListOfQuizzes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ListOfQuizzes.resx">
+      <DependentUpon>ListOfQuizzes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MenuUC.resx">
+      <DependentUpon>MenuUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\QuizUC.resx">
       <DependentUpon>QuizUC.cs</DependentUpon>
