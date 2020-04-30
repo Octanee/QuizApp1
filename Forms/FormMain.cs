@@ -66,6 +66,7 @@ namespace QuizGUI1
         {
             QuizUC.Instance.Quiz = quiz;
             ShowUserControl(QuizUC.Instance);
+            QuizUC.Instance.StartQuiz();
         }
 
         public void ShowMenu()

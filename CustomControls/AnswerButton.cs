@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace QuizGUI1
 {
-    class AnswerButtom : RoundedButton
+    class AnswerButton : RoundedButton
     {
         public bool isCorrect { get; set; } = false;
     }

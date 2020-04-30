@@ -12,6 +12,7 @@ namespace QuizGUI1.CustomControls
     public class RoundedButton : Button
     {
         #region Properties
+
         private Color borderColor = Color.Silver;
         private Color onHoverBorderColor = Color.Gray;
         private Color buttonColor = Color.Red;

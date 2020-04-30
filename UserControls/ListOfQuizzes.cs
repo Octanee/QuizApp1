@@ -68,6 +68,7 @@ namespace QuizGUI1.UserControls
                 quiz.Name = "Quiz" + i;
                 quiz.Questions = GenerateQuestions(random.Next(5, 50));
                 quiz.Category = (QuizCategory) random.Next(Enum.GetNames(typeof(QuizCategory)).Length);
+                quiz.Time = quiz.Questions.Count * 10;
                 temp.Add(quiz);
             }
 

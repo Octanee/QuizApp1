@@ -56,7 +56,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Source\Answer.cs" />
-    <Compile Include="CustomControls\AnswerButtom.cs">
+    <Compile Include="CustomControls\AnswerButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\FormLogin.cs">
@@ -111,6 +111,12 @@
     <Compile Include="UserControls\MenuUC.Designer.cs">
       <DependentUpon>MenuUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\QuestionUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\QuestionUC.Designer.cs">
+      <DependentUpon>QuestionUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\QuizResult.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MenuUC.resx">
       <DependentUpon>MenuUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\QuestionUC.resx">
+      <DependentUpon>QuestionUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\QuizResult.resx">
       <DependentUpon>QuizResult.cs</DependentUpon>

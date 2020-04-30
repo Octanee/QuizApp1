@@ -15,6 +15,7 @@ namespace QuizGUI1.source
 			get { return name; }
 			set { name = value; }
 		}
+
 		private QuizCategory category;
 
 		public QuizCategory Category
@@ -30,6 +31,15 @@ namespace QuizGUI1.source
 			get { return questions; }
 			set { questions = value; }
 		}
+
+		private int time;
+
+		public int Time
+		{
+			get { return time; }
+			set { time = value; }
+		}
+
 
 		public void AddQuestion(Question question)
 		{

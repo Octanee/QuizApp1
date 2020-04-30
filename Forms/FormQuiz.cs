@@ -26,7 +26,7 @@ namespace QuizGUI1
 
         private int correctAnswers = 0;
 
-        private List<AnswerButtom> buttons;
+        private List<AnswerButton> buttons;
 
         private Question currentQuestion;
 
@@ -55,7 +55,7 @@ namespace QuizGUI1
 
         private void SetAnswerButtons()
         {
-            buttons = new List<AnswerButtom>();
+            buttons = new List<AnswerButton>();
 
             buttons.Add(buttonA);
             buttons.Add(buttonB);
@@ -104,7 +104,7 @@ namespace QuizGUI1
         private void CheckAnswer(object sender, EventArgs e)
         {
             ShowAnswers();
-            var button = sender as AnswerButtom;
+            var button = sender as AnswerButton;
 
             if (button.isCorrect)
             {
@@ -136,7 +136,7 @@ namespace QuizGUI1
         {
             labelPytanie.Text = current.Text;
 
-            var tmpButtons = new List<AnswerButtom>(buttons);
+            var tmpButtons = new List<AnswerButton>(buttons);
 
             ResetButtons();
 
@@ -160,7 +160,7 @@ namespace QuizGUI1
             }
         }
 
-        private void SetButton(AnswerButtom button, string answer)
+        private void SetButton(AnswerButton button, string answer)
         {
             button.Text = answer;
             if (answer == currentQuestion.CorrectAnswer)

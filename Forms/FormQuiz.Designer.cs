@@ -37,10 +37,10 @@
             this.timerPytanie = new System.Windows.Forms.Timer(this.components);
             this.timerAnswer = new System.Windows.Forms.Timer(this.components);
             this.buttonEndQuiz = new System.Windows.Forms.Button();
-            this.buttonD = new QuizGUI1.AnswerButtom();
-            this.buttonC = new QuizGUI1.AnswerButtom();
-            this.buttonB = new QuizGUI1.AnswerButtom();
-            this.buttonA = new QuizGUI1.AnswerButtom();
+            this.buttonD = new QuizGUI1.AnswerButton();
+            this.buttonC = new QuizGUI1.AnswerButton();
+            this.buttonB = new QuizGUI1.AnswerButton();
+            this.buttonA = new QuizGUI1.AnswerButton();
             this.panelImage.SuspendLayout();
             this.panelText.SuspendLayout();
             this.SuspendLayout();
@@ -242,10 +242,10 @@
         private System.Windows.Forms.Label labelPytanie;
         private System.Windows.Forms.Timer timerPytanie;
         private System.Windows.Forms.Timer timerAnswer;
-        private AnswerButtom buttonA;
-        private AnswerButtom buttonB;
-        private AnswerButtom buttonD;
-        private AnswerButtom buttonC;
+        private AnswerButton buttonA;
+        private AnswerButton buttonB;
+        private AnswerButton buttonD;
+        private AnswerButton buttonC;
         private System.Windows.Forms.Label labelCount;
         private System.Windows.Forms.Button buttonEndQuiz;
     }
