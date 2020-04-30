@@ -40,6 +40,7 @@ namespace QuizGUI1.UserControls
         private void buttonDashboard_Click(object sender , EventArgs e)
         {
             SetSidePanel(sender);
+            ShowUserControl(DashboardUC.Instance);
         }
 
         private void buttonListOfQuizzes_Click(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace QuizGUI1.UserControls
         private void buttonLeaderboard_Click(object sender, EventArgs e)
         {
             SetSidePanel(sender);
-
+            ShowUserControl(LeaderboardUC.Instance);
         }
 
         private void SetSidePanel(object sender)
@@ -70,6 +71,11 @@ namespace QuizGUI1.UserControls
                 control.Dock = DockStyle.Fill;
             }
             control.BringToFront();
+        }
+
+        public void ShowQuizResult()
+        {
+            ShowUserControl(QuizResult.Instance);
         }
     }
 }

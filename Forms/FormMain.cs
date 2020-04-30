@@ -32,37 +32,15 @@ namespace QuizGUI1
                 return instance;
             }
         }
-
         #endregion
 
-        private Quiz quiz;
 
         public FormMain()
         {
             InitializeComponent();
 
-            quiz = PopulateList(10);
 
             ShowMenu();
-        }
-
-
-        private Quiz PopulateList(int size)
-        {
-            var temp = new Quiz();
-            for (int i = 0; i < size; i++)
-            {
-                Question question = new Question();
-                question.Text = "Tekst pytania " + i;
-                question.CorrectAnswer = "Poprawna odwowiedz";
-                question.IncorrectAnswer1 = "Bledna odpowiedz 1";
-                question.IncorrectAnswer2 = "Bledna odpowiedz 2";
-                question.IncorrectAnswer3 = "Bledna odpowiedz 3";
-
-                temp.AddQuestion(question);
-            }
-
-            return temp;
         }
 
         #region UserControl
@@ -84,14 +62,21 @@ namespace QuizGUI1
             }
         }
 
-        private void StartQuiz()
+        public void StartQuiz(Quiz quiz)
         {
+            QuizUC.Instance.Quiz = quiz;
             ShowUserControl(QuizUC.Instance);
         }
 
-        private void ShowMenu()
+        public void ShowMenu()
         {
             ShowUserControl(MenuUC.Instance);
+        }
+
+        public void ShowQuizResult()
+        {
+            RemoveControl(QuizUC.Instance);
+            ShowUserControl(QuizResult.Instance);
         }
         #endregion
 
@@ -132,38 +117,6 @@ namespace QuizGUI1
         {
             WindowState = FormWindowState.Minimized;
         }
-        #endregion
-
-        #region Menu
-
-
-        
-
-        private void mButtonDashboard_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mButtonNewQuiz_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mButtonListOfQuizzes_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mButtonLeaderboard_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SetSidePanel()
-        {
-
-        }
-
         #endregion
     }
 }

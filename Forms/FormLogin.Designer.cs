@@ -84,11 +84,11 @@
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 86);
+            this.label1.Location = new System.Drawing.Point(0, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 64);
+            this.label1.Size = new System.Drawing.Size(300, 73);
             this.label1.TabIndex = 1;
             this.label1.Text = "Sign In";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,10 +96,10 @@
             // textBoxLogin
             // 
             this.textBoxLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxLogin.Location = new System.Drawing.Point(53, 60);
+            this.textBoxLogin.Font = new System.Drawing.Font("Comic Sans MS", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxLogin.Location = new System.Drawing.Point(53, 57);
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(238, 29);
+            this.textBoxLogin.Size = new System.Drawing.Size(238, 35);
             this.textBoxLogin.TabIndex = 1;
             // 
             // panel2
@@ -121,11 +121,11 @@
             // textBoxPassword
             // 
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxPassword.Location = new System.Drawing.Point(53, 123);
+            this.textBoxPassword.Font = new System.Drawing.Font("Comic Sans MS", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxPassword.Location = new System.Drawing.Point(53, 120);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(238, 29);
+            this.textBoxPassword.Size = new System.Drawing.Size(238, 35);
             this.textBoxPassword.TabIndex = 4;
             // 
             // panel1
@@ -160,7 +160,7 @@
             this.buttonRegistration.ButtonColor = System.Drawing.Color.RoyalBlue;
             this.buttonRegistration.FlatAppearance.BorderSize = 0;
             this.buttonRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRegistration.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonRegistration.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonRegistration.Location = new System.Drawing.Point(15, 284);
             this.buttonRegistration.Name = "buttonRegistration";
             this.buttonRegistration.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -179,7 +179,7 @@
             this.buttonLogin.ButtonColor = System.Drawing.Color.RoyalBlue;
             this.buttonLogin.FlatAppearance.BorderSize = 0;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLogin.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonLogin.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonLogin.Location = new System.Drawing.Point(15, 226);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.OnHoverBorderColor = System.Drawing.Color.Transparent;

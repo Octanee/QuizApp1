@@ -15,20 +15,19 @@ namespace QuizGUI1.UserControls
     public partial class QuizUC : UserControl
     {
         #region Singleton
-
-        private static QuizUC instance;
-
+        private static QuizUC instance = null;
         public static QuizUC Instance
         {
-            get {
+            get
+            {
                 if (instance == null)
                 {
                     instance = new QuizUC();
                 }
-                return instance; 
+
+                return instance;
             }
         }
-
         #endregion
 
         #region Properties
@@ -45,6 +44,11 @@ namespace QuizGUI1.UserControls
         public QuizUC()
         {
             InitializeComponent();
+        }
+
+        private void roundedButton1_Click(object sender, EventArgs e)
+        {
+            MenuUC.Instance.ShowQuizResult();
         }
     }
 }

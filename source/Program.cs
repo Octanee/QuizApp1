@@ -17,7 +17,7 @@ namespace QuizGUI1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(FormMain.Instance);
+            Application.Run(new FormLogin());
         }
     }
 }

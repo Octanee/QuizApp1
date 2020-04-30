@@ -31,5 +31,10 @@ namespace QuizGUI1.UserControls
             labelNumOfQuestions.Text = quiz.Questions.Count.ToString();
             labelCategory.Text = quiz.Category.ToString();
         }
+
+        private void buttonStartQuiz_Click(object sender, EventArgs e)
+        {
+            FormMain.Instance.StartQuiz(quiz);
+        }
     }
 }

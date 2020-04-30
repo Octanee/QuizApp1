@@ -35,7 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelCategory = new System.Windows.Forms.Label();
-            this.roundedButton1 = new QuizGUI1.CustomControls.RoundedButton();
+            this.buttonStartQuiz = new QuizGUI1.CustomControls.RoundedButton();
             this.panelName.SuspendLayout();
             this.panelInfo.SuspendLayout();
             this.SuspendLayout();
@@ -118,23 +118,24 @@
             this.labelCategory.Text = "label1";
             this.labelCategory.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // roundedButton1
+            // buttonStartQuiz
             // 
-            this.roundedButton1.BorderColor = System.Drawing.Color.Silver;
-            this.roundedButton1.BorderThickness = 0;
-            this.roundedButton1.ButtonColor = System.Drawing.Color.DarkSlateBlue;
-            this.roundedButton1.FlatAppearance.BorderSize = 0;
-            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton1.Location = new System.Drawing.Point(800, 25);
-            this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.roundedButton1.OnHoverButtonColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundedButton1.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.roundedButton1.Size = new System.Drawing.Size(150, 50);
-            this.roundedButton1.TabIndex = 0;
-            this.roundedButton1.Text = "Start";
-            this.roundedButton1.TextColor = System.Drawing.Color.White;
-            this.roundedButton1.UseVisualStyleBackColor = true;
+            this.buttonStartQuiz.BorderColor = System.Drawing.Color.Silver;
+            this.buttonStartQuiz.BorderThickness = 0;
+            this.buttonStartQuiz.ButtonColor = System.Drawing.Color.DarkSlateBlue;
+            this.buttonStartQuiz.FlatAppearance.BorderSize = 0;
+            this.buttonStartQuiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStartQuiz.Location = new System.Drawing.Point(800, 25);
+            this.buttonStartQuiz.Name = "buttonStartQuiz";
+            this.buttonStartQuiz.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.buttonStartQuiz.OnHoverButtonColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonStartQuiz.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.buttonStartQuiz.Size = new System.Drawing.Size(150, 50);
+            this.buttonStartQuiz.TabIndex = 0;
+            this.buttonStartQuiz.Text = "Start";
+            this.buttonStartQuiz.TextColor = System.Drawing.Color.White;
+            this.buttonStartQuiz.UseVisualStyleBackColor = true;
+            this.buttonStartQuiz.Click += new System.EventHandler(this.buttonStartQuiz_Click);
             // 
             // Item_ListOfQuizzes
             // 
@@ -143,7 +144,7 @@
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.Controls.Add(this.panelInfo);
             this.Controls.Add(this.panelName);
-            this.Controls.Add(this.roundedButton1);
+            this.Controls.Add(this.buttonStartQuiz);
             this.Name = "Item_ListOfQuizzes";
             this.Size = new System.Drawing.Size(960, 100);
             this.panelName.ResumeLayout(false);
@@ -154,7 +155,7 @@
 
         #endregion
 
-        private CustomControls.RoundedButton roundedButton1;
+        private CustomControls.RoundedButton buttonStartQuiz;
         private System.Windows.Forms.Label labelQuizName;
         private System.Windows.Forms.Label labelNumOfQuestions;
         private System.Windows.Forms.Panel panelName;

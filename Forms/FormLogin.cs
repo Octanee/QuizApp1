@@ -81,12 +81,14 @@ namespace QuizGUI1.Forms
         {
             string login = textBoxLogin.Text;
             string password = textBoxPassword.Text;
+
             if (userExists(login, password))
             {
                 FormMain main = FormMain.Instance;
                 main.Show();
                 this.Visible = false;
             }
+
             textBoxLogin.Text = "";
             textBoxPassword.Text = "";
             panel2.BackColor = Color.Red;
