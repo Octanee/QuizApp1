@@ -48,6 +48,7 @@ namespace QuizGUI1.UserControls
 
         private void roundedButton1_Click(object sender, EventArgs e)
         {
+            FormMain.Instance.ShowMenu();
             MenuUC.Instance.ShowQuizResult();
         }
     }

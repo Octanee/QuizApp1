@@ -75,6 +75,7 @@ namespace QuizGUI1.UserControls
 
         public void ShowQuizResult()
         {
+            FormMain.Instance.RemoveControl(QuizUC.Instance);
             ShowUserControl(QuizResult.Instance);
         }
     }

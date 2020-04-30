@@ -54,7 +54,7 @@ namespace QuizGUI1
             control.BringToFront();
         }
 
-        private void RemoveControl(UserControl control)
+        public void RemoveControl(UserControl control)
         {
             if (panelUC.Controls.Contains(control))
             {
