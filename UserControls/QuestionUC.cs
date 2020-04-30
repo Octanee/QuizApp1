@@ -24,7 +24,24 @@ namespace QuizGUI1.UserControls
 
         private void ShowQuestion()
         {
-            label1.Text = question.Text;
+            labelText.Text = question.Text;
+            SetRandomAnswer();
+        }
+
+        private void SetRandomAnswer()
+        {
+            var random = new Random();
+            var answers = new List<string>() { question.CorrectAnswer, question.IncorrectAnswer1, question.IncorrectAnswer2, question.IncorrectAnswer3 };
+
+            var buttons = new List<AnswerButton> { answerA, answerB, answerC, answerD };
+
+            foreach (var button in buttons)
+            {
+                var index = random.Next(answers.Count);
+                var answer = answers[index];
+                button.Text = answer;
+                answers.Remove(answer);
+            }
         }
     }
 }
