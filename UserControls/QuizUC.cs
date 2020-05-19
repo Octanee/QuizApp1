@@ -50,7 +50,6 @@ namespace QuizGUI1.UserControls
         public void StartQuiz()
         {
             CreateQuestionsUC();
-            CreateQuestionsUCButton();
             SetQuizTimer();
         }
 
@@ -67,17 +66,6 @@ namespace QuizGUI1.UserControls
                 var questionUC = new QuestionUC(question);
                 questionUCs.Add(questionUC);
                 panelQuestion.Controls.Add(questionUC);
-            }
-        }
-
-        private void CreateQuestionsUCButton()
-        {
-            foreach (var uc in questionUCs)
-            {
-                RoundedButton button = new RoundedButton();
-                button.Size = new Size(42, 40);
-                button.BorderThickness = 0;
-                flpQuestionButoons.Controls.Add(button);
             }
         }
 

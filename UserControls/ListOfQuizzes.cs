@@ -42,7 +42,7 @@ namespace QuizGUI1.UserControls
         public ListOfQuizzes()
         {
             InitializeComponent();
-            quizzes = GenerateQuiz(100);
+            quizzes = GenerateQuiz(10);
             AddQuizButton();
         }
 
