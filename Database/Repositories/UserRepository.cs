@@ -1,5 +1,5 @@
 ﻿using QuizGUI1.Database.Repositories.Interfaces;
-using QuizGUI1.Source;
+using QuizGUI1.Source.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

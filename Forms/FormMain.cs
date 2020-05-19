@@ -1,6 +1,7 @@
 ﻿using QuizGUI1.CustomControls;
+using QuizGUI1.Database.UnitOfWork;
 using QuizGUI1.Forms;
-using QuizGUI1.source;
+using QuizGUI1.Source.Models;
 using QuizGUI1.UserControls;
 using System;
 using System.Collections.Generic;
@@ -34,12 +35,13 @@ namespace QuizGUI1
         }
         #endregion
 
-
+        private UnitOfWork UnitOfWork = null;
         public FormMain()
         {
             InitializeComponent();
 
             ShowMenu();
+            UnitOfWork = new UnitOfWork();
         }
 
         #region UserControl

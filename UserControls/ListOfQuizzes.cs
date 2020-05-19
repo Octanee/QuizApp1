@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuizGUI1.source;
+using QuizGUI1.Source.Models;
 
 namespace QuizGUI1.UserControls
 {
