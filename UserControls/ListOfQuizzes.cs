@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuizGUI1.Source.Models;
+using QuizGUI1.Database.UnitOfWork;
 
 namespace QuizGUI1.UserControls
 {
@@ -42,11 +43,27 @@ namespace QuizGUI1.UserControls
         public ListOfQuizzes()
         {
             InitializeComponent();
-            quizzes = GenerateQuiz(10);
-            AddQuizButton();
+            using (var unitOfWork = new UnitOfWork(new Database.QuizContext()))
+            {
+                unitOfWork.Clear();
+                quizzes = unitOfWork.Quizzes.GetAll().ToList();
+                if (quizzes.Count == 0)
+                {
+                    quizzes = PopulateDatabase(unitOfWork);
+                }
+            }
+            AddQuizItem();
         }
 
-        private void AddQuizButton()
+        private List<Quiz> PopulateDatabase(UnitOfWork unitOfWork)
+        {
+            var temp = GenerateQuiz(10, unitOfWork);
+
+            unitOfWork.Save();
+            return temp;
+        }
+
+        private void AddQuizItem()
         {
             foreach (var quiz in quizzes)
             {
@@ -56,7 +73,7 @@ namespace QuizGUI1.UserControls
         }
 
         #region Generate
-        private List<Quiz> GenerateQuiz(int num)
+        private List<Quiz> GenerateQuiz(int num, UnitOfWork unitOfWork)
         {
             var temp = new List<Quiz>();
 
@@ -64,18 +81,21 @@ namespace QuizGUI1.UserControls
 
             for (int i = 0; i < num; i++)
             {
+                Console.WriteLine("Generete new Quiz");
+
                 var quiz = new Quiz();
                 quiz.Name = "Quiz" + i;
-                quiz.Questions = GenerateQuestions(random.Next(5, 50));
-                quiz.Category = (QuizCategory) random.Next(Enum.GetNames(typeof(QuizCategory)).Length);
+                quiz.Questions = GenerateQuestions(random.Next(5, 50), unitOfWork);
+                quiz.Category = (QuizCategory)random.Next(Enum.GetNames(typeof(QuizCategory)).Length);
                 quiz.Time = quiz.Questions.Count * quiz.QuestionTime;
                 temp.Add(quiz);
+                unitOfWork.Quizzes.Add(quiz);
             }
 
             return temp;
         }
 
-        private List<Question> GenerateQuestions(int num)
+        private List<Question> GenerateQuestions(int num, UnitOfWork unitOfWork)
         {
             var temp = new List<Question>();
 
@@ -89,6 +109,7 @@ namespace QuizGUI1.UserControls
                 question.IncorrectAnswer3 = "Incorrect Answer 3";
 
                 temp.Add(question);
+                unitOfWork.Questions.Add(question);
             }
 
             return temp;

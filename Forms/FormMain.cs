@@ -35,13 +35,12 @@ namespace QuizGUI1
         }
         #endregion
 
-        private UnitOfWork UnitOfWork = null;
+
         public FormMain()
         {
             InitializeComponent();
 
             ShowMenu();
-            UnitOfWork = new UnitOfWork();
         }
 
         #region UserControl

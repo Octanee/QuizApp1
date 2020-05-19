@@ -21,6 +21,12 @@ namespace QuizGUI1.Database
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Answer>().ToTable("Answers");
+            modelBuilder.Entity<Question>().ToTable("Question");
+            modelBuilder.Entity<Quiz>().ToTable("Quiz");
+            modelBuilder.Entity<Result>().ToTable("Result");
+            modelBuilder.Entity<User>().ToTable("User");
+
             base.OnModelCreating(modelBuilder);
         }
     }

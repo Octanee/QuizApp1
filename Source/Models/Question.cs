@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -7,11 +8,11 @@ using System.Threading.Tasks;
 namespace QuizGUI1.Source.Models
 {
     public class Question
-    {
+	{
+		[Key]
+		public int QuestionID { get; set; }
 
-        #region Properties
-
-        private string text;
+		private string text;
 
 		public string Text
 		{
@@ -48,7 +49,5 @@ namespace QuizGUI1.Source.Models
 			get { return incorrectAnswer3; }
 			set { incorrectAnswer3 = value; }
 		}
-
-		#endregion
 	}
 }

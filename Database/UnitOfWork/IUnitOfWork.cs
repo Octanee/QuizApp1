@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuizGUI1.Database.UnitOfWork
 {
-    public interface IUnitOfWork:IDisposable
+    public interface IUnitOfWork : IDisposable
     {
         IAnswerRepository Answers { get; }
         IQuestionRepository Questions { get; }
@@ -16,5 +16,6 @@ namespace QuizGUI1.Database.UnitOfWork
         IUserRepository Users { get; }
 
         int Save();
+
     }
 }

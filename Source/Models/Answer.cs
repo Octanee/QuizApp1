@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace QuizGUI1.Source.Models
 {
 	public class Answer : Question
 	{
+		[Key]
+		public int AnswerID { get; set; }
 
 		private Question question;
 
