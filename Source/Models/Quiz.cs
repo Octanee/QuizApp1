@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuizGUI1.source
+namespace QuizGUI1.Source.Models
 {
 	public class Quiz
 	{
@@ -45,6 +45,15 @@ namespace QuizGUI1.source
 		{
 			questions.Add(question);
 		}
+
+		private int questionTime = 15;
+
+		public int QuestionTime
+		{
+			get { return questionTime; }
+			set { questionTime  = value; }
+		}
+
 	}
 
 	public enum QuizCategory

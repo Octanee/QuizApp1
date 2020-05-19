@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuizGUI1.source
+namespace QuizGUI1.Source.Models
 {
 	public class Answer : Question
 	{
+
 		private Question question;
 
 		public Question Question

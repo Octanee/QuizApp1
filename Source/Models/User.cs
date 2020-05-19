@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuizGUI1.Source
+namespace QuizGUI1.Source.Models
 {
-    class User
+    public class User
     {
 		private string login;
 

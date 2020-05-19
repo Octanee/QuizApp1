@@ -39,7 +39,6 @@ namespace QuizGUI1
         {
             InitializeComponent();
 
-
             ShowMenu();
         }
 
@@ -119,5 +118,6 @@ namespace QuizGUI1
             WindowState = FormWindowState.Minimized;
         }
         #endregion
+
     }
 }

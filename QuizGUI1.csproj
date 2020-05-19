@@ -33,9 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,12 +59,28 @@
     <Compile Include="CustomControls\RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Database\QuizContext.cs" />
+    <Compile Include="Database\Repositories\AnswerRepository.cs" />
+    <Compile Include="Database\Repositories\Interfaces\IAnswerRepository.cs" />
+    <Compile Include="Database\Repositories\Interfaces\IQuestionRepository.cs" />
+    <Compile Include="Database\Repositories\Interfaces\IQuizRepository.cs" />
+    <Compile Include="Database\Repositories\Interfaces\IRepository.cs" />
+    <Compile Include="Database\Repositories\Interfaces\IResultRepository.cs" />
+    <Compile Include="Database\Repositories\Interfaces\IUserRepository.cs" />
+    <Compile Include="Database\Repositories\QuestionRepository.cs" />
+    <Compile Include="Database\Repositories\QuizRepository.cs" />
+    <Compile Include="Database\Repositories\Repository.cs" />
+    <Compile Include="Database\Repositories\ResultRepository.cs" />
+    <Compile Include="Database\Repositories\UserRepository.cs" />
+    <Compile Include="Database\UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="Database\UnitOfWork\UnitOfWork.cs" />
+    <Compile Include="Database\Migrations\Configuration.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Source\Answer.cs" />
+    <Compile Include="Source\Models\Answer.cs" />
     <Compile Include="CustomControls\AnswerButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -77,10 +102,11 @@
     <Compile Include="Forms\FormQuiz.Designer.cs">
       <DependentUpon>FormQuiz.cs</DependentUpon>
     </Compile>
+    <Compile Include="Source\Models\Result.cs" />
     <Compile Include="Source\Program.cs" />
-    <Compile Include="Source\Question.cs" />
-    <Compile Include="Source\Quiz.cs" />
-    <Compile Include="Source\User.cs" />
+    <Compile Include="Source\Models\Question.cs" />
+    <Compile Include="Source\Models\Quiz.cs" />
+    <Compile Include="Source\Models\User.cs" />
     <Compile Include="UserControls\DashboardUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,6 +195,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
