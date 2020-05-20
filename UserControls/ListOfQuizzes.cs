@@ -55,7 +55,7 @@ namespace QuizGUI1.UserControls
                 var temp = unitOfWork.Questions.GetAll().ToList();
                 foreach (var item in temp)
                 {
-                    Console.WriteLine("QUESTION - ID: {0}, Text: {1}");
+                    Console.WriteLine("QUESTION - ID: {0}, Text: {1}", item.QuestionID, item.Text);
                 }
 
                /* foreach (var quiz in quizzes)

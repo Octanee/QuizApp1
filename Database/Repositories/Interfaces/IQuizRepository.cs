@@ -10,5 +10,6 @@ namespace QuizGUI1.Database.Repositories.Interfaces
 {
     public interface IQuizRepository : IRepository<Quiz>
     {
+
     }
 }
