@@ -13,58 +13,55 @@ namespace QuizGUI1.Database.Repositories
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         protected readonly DbContext Context;
-        private IDbSet<TEntity> Set;
 
         public Repository(DbContext context)
         {
             this.Context = context;
-            this.Set = Context.Set<TEntity>();
         }
 
         public void Add(TEntity entity)
         {
-            Set.Add(entity);
+            Context.Set<TEntity>().Add(entity);
         }
 
         public void AddRange(IEnumerable<TEntity> entities)
         {
-            foreach (var entity in entities)
-            {
-                Add(entity);
-            }
+            Context.Set<TEntity>().AddRange(entities);
         }
 
         public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
-            return Set.Where(predicate);
+            return Context.Set<TEntity>().Where(predicate);
         }
 
         public TEntity Get(int ID)
         {
-            return Set.Find(ID);
+            return Context.Set<TEntity>().Find(ID);
         }
 
         public IEnumerable<TEntity> GetAll()
         {
-            return Set.ToList();
+            return Context.Set<TEntity>().ToList();
         }
 
         public void Remove(TEntity entity)
         {
-            Set.Remove(entity);
+            Context.Set<TEntity>().Remove(entity);
         }
 
         public void RemoveRange(IEnumerable<TEntity> entities)
         {
-            foreach (var entity in entities)
-            {
-                Remove(entity);
-            }
+            Context.Set<TEntity>().RemoveRange(entities);
+        }
+
+        public void RemoveAll()
+        {
+            Context.Set<TEntity>().RemoveRange(GetAll());
         }
 
         public void Update(TEntity entity)
         {
-            Set.AddOrUpdate(entity);
+            Context.Entry(entity).State = EntityState.Modified;
         }
     }
 }

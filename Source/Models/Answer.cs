@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuizGUI1.Source.Models
 {
-	public class Answer : Question
+	public class Answer
 	{
 		[Key]
 		public int AnswerID { get; set; }
@@ -20,17 +20,12 @@ namespace QuizGUI1.Source.Models
 			set { question = value; }
 		}
 
-		private bool isCorrect = false;
+		private string userAnswer;
 
-		public bool IsCorrect
+		public string UserAnswer
 		{
-			get { return isCorrect = false; }
-			set { isCorrect = value; }
-		}
-
-		public Answer(Question question)
-		{
-			this.question = question;
+			get { return userAnswer; }
+			set { userAnswer = value; }
 		}
 	}
 }

@@ -44,12 +44,6 @@ namespace QuizGUI1.Source.Models
 			set { time = value; }
 		}
 
-
-		public void AddQuestion(Question question)
-		{
-			questions.Add(question);
-		}
-
 		private int questionTime = 15;
 
 		public int QuestionTime

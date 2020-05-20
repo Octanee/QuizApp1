@@ -20,5 +20,6 @@ namespace QuizGUI1.Database.Repository
 
         void Remove(TEntity entity);
         void RemoveRange(IEnumerable<TEntity> entities);
+        void RemoveAll();
     }
 }

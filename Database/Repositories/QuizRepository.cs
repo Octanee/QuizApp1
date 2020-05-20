@@ -22,5 +22,6 @@ namespace QuizGUI1.Database.Repositories
                 return Context as QuizContext;
             }
         }
+
     }
 }

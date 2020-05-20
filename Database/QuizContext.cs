@@ -18,13 +18,17 @@ namespace QuizGUI1.Database
         public DbSet<Result> Results;
         public DbSet<User> Users;
 
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Answer>().ToTable("Answers");
+
             modelBuilder.Entity<Question>().ToTable("Question");
+
             modelBuilder.Entity<Quiz>().ToTable("Quiz");
+            modelBuilder.Entity<Quiz>().HasMany(q => q.Questions).WithMany();
+
             modelBuilder.Entity<Result>().ToTable("Result");
+
             modelBuilder.Entity<User>().ToTable("User");
 
             base.OnModelCreating(modelBuilder);

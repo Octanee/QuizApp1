@@ -83,11 +83,11 @@ namespace QuizGUI1.Database.UnitOfWork
         {
             try
             {
-               // Answers.RemoveRange(Answers.GetAll().ToList());
-               // Questions.RemoveRange(Questions.GetAll().ToList());
+                Answers.RemoveRange(Answers.GetAll().ToList());
+                Questions.RemoveRange(Questions.GetAll().ToList());
                 Quizzes.RemoveRange(Quizzes.GetAll().ToList());
-               // Results.RemoveRange(Results.GetAll().ToList());
-                //Users.RemoveRange(Users.GetAll().ToList());
+                Results.RemoveRange(Results.GetAll().ToList());
+                Users.RemoveRange(Users.GetAll().ToList());
             }catch(Exception e)
             {
                 MessageBox.Show(e.Message + e.StackTrace, "Clear UnitOfWork Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

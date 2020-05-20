@@ -45,22 +45,32 @@ namespace QuizGUI1.UserControls
             InitializeComponent();
             using (var unitOfWork = new UnitOfWork(new Database.QuizContext()))
             {
-                unitOfWork.Clear();
+                Console.WriteLine("Using unitOfWork");
                 quizzes = unitOfWork.Quizzes.GetAll().ToList();
                 if (quizzes.Count == 0)
                 {
-                    quizzes = PopulateDatabase(unitOfWork);
+                    Console.WriteLine("Count == 0");
+                    quizzes = GenerateQuizzes(10, unitOfWork);
                 }
+                var temp = unitOfWork.Questions.GetAll().ToList();
+                foreach (var item in temp)
+                {
+                    Console.WriteLine("QUESTION - ID: {0}, Text: {1}");
+                }
+
+               /* foreach (var quiz in quizzes)
+                {
+                    Console.WriteLine("QUIZ - ID: {0}, Name: {1}, Category: {2}, QuestionsCount: {3}", quiz.QuizID, quiz.Name, quiz.Category,quiz.Questions.Count);
+                    foreach (var question in quiz.Questions)
+                    {
+                        Console.WriteLine("QUESTION - ID: {0}, Text: {1}");
+                    }
+                    Console.WriteLine("QUIZ END");
+                }*/
+                Console.WriteLine("UnitOfWork save");
+                unitOfWork.Save();
             }
             AddQuizItem();
-        }
-
-        private List<Quiz> PopulateDatabase(UnitOfWork unitOfWork)
-        {
-            var temp = GenerateQuiz(10, unitOfWork);
-
-            unitOfWork.Save();
-            return temp;
         }
 
         private void AddQuizItem()
@@ -73,7 +83,7 @@ namespace QuizGUI1.UserControls
         }
 
         #region Generate
-        private List<Quiz> GenerateQuiz(int num, UnitOfWork unitOfWork)
+        private List<Quiz> GenerateQuizzes(int num, UnitOfWork unitOfWork)
         {
             var temp = new List<Quiz>();
 
